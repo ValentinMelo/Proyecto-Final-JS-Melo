@@ -4,15 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Préstamos ya!</h1>
-    <p>Aquí en nuestro banco pensamos en nuestros clientes y en sus finanzas, por lo que creamos una nueva línea de crédito para que puedas consumir aquello que más te gusta sin descuidar tu bolsillo</p>
-    <h2>Requisitos</h2>
-    <p>Te otorgaremos un préstamo de hasta 5.000 USD, el cual podrás pagar en 1 a 12 cuotas. En caso que lo pidas en 6 o menos cuotas te ofreceremos una tasa de interés fija del 2% mensual sobre la cuota, y si deseas pagarlo en más de 6 cuotas, te ofreceremos una tasa de interés fija del 5% mensual sobre la cuota.</p>
-    <h2>Además...</h2>
-    <p>Además, si lo deseas, una vez aprobado el primer préstamo y teniendo ingresos superiores al capital máximo (5.000 USD), te ofreceremos otro con iguales tasas y un monto equivalente al capital máximo (5.000 USD) menos el capital otorgado en el primer préstamo. En caso que tus ingresos sean menores al capital máximo (5.000 USD) el monto del segundo préstamo será equivalente al 50% de la diferencia entre tus ingresos y el monto del primer préstamo aprobado</p>
+    <header class="top-navegador">
+        <div class="topnav">
+            <a href="index.html" class="titulo">PréstamosYa!</a>
+            <ul class="menu-principal">
+                <li><a href="">Simulador</a></li>
+                <li><a href="">Por qué nosotros?</a></li>
+                <li><a href="">Bases</a></li>
+                <li><a href="">Testimonios</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="imagen-portada">
+        <img src="../imagenes/finanzas.webp" alt="finanzas">
+    </div>
+
+    <div class="contenido">
+        <h1 class="titulo">Préstamos ya!</h1>
+        <div class="bases">
+            <h2>Bases</h2>
+            <p>Aquí en nuestro banco pensamos en nuestros clientes y en sus finanzas, por lo que creamos una nueva línea de crédito para que puedas consumir aquello que más te gusta sin descuidar tu bolsillo</p>
+        </div>
+        <div class="requisitos">
+            <h2>Requisitos</h2>
+            <p>Te otorgaremos un préstamo de hasta 5.000 USD, el cual podrás pagar en 1 a 12 cuotas. En caso que lo pidas en 6 o menos cuotas te ofreceremos una tasa de interés fija del 2% mensual sobre la cuota, y si deseas pagarlo en más de 6 cuotas, te ofreceremos una tasa de interés fija del 5% mensual sobre la cuota.</p>
+        </div>
+        <div class="ademas">
+            <h2>Además...</h2>
+            <p>Además, si lo deseas, una vez aprobado el primer préstamo y teniendo ingresos superiores al capital máximo (5.000 USD), te ofreceremos otro con iguales tasas y un monto equivalente al capital máximo (5.000 USD) menos el capital otorgado en el primer préstamo. En caso que tus ingresos sean menores al capital máximo (5.000 USD) el monto del segundo préstamo será equivalente al 50% de la diferencia entre tus ingresos y el monto del primer préstamo aprobado</p>
+        </div>
+    </div>
+
+    <form id="calculadora">
+        <div class="form">
+            <div class="form-input">
+                <input type="text" class="form-control" id="nombre" placeholder="Por favor ingresa tu nombre">
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-input">
+                <input type="text" class="form-control" id="apellido" placeholder="Por favor ingresa tu apellido">
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-input">
+                <input type="number" class="form-control" id="monto" placeholder="Ingresa el monto a pedir (máximo 5.000 USD)" min="1" max="5000">
+            </div>
+        </div>
+        <div class="form">  
+            <div class="form-input">
+                <input type="number" class="form-control" id="cuotas" placeholder="Ingresa la cantidad de cuotas a pagar" min="1" max="12">
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-input">
+                <input type="number" class="form-control" id="ingresos" placeholder="Ingresa tus ingresos netos mensuales en USD">
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-input">
+                <input type="submit" class="form-control" id="boton" value="Calcular">
+            </div>
+        </div>
+    </form>
+    
     <script src="index.js"></script>
 </body>
 </html>
